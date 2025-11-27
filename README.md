@@ -1,0 +1,2 @@
+# NOgod
+no god 
