@@ -71,5 +71,6 @@ $app = [System.Windows.Application]::new()
 [void]$app.Run($window)
 
 reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\logonui.exe" /f
-taskkill /f /im powershell.exe
+exit
+
 
