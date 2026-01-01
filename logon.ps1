@@ -67,11 +67,9 @@ $mediaPlayer.Source = [System.Uri]::new($TempVideo)
 $mediaPlayer.Volume = 1.0
 $mediaPlayer.Play()
 
-Start-Process -FilePath "c:\LogonAudio.exe" -WindowStyle Hidden
-
 $app = [System.Windows.Application]::new()
 [void]$app.Run($window)
 
 reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\logonui.exe" /f
+taskkill /f /im powershell.exe
 
-exit
